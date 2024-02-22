@@ -17,11 +17,13 @@
     </div>
     <div class="container">
       <% { %>
-      <div class="alert alert-info" role="alert"><%-  %></div>
+      <div class="alert alert-info" role="alert"><%- %></div>
       <% } %>
       <div class="row">
         <div class="col">
-          <a href="/kategori/create" class="btn btn-sm btn-success">Tambah</a>
+          <a href="../kategori/create.ejs" class="btn btn-sm btn-success"
+            >Tambah</a
+          >
           <table class="table">
             <thead>
               <tr>
@@ -36,13 +38,11 @@
                 <th scope="row"><% %></th>
                 <td><%= %></td>
                 <td>
-                  <a
-                    href="/kategori/edit/<%= data[i].id_kategori %>"
-                    class="btn btn-sm btn-warning"
+                  <a href="/kategori/edit/<%= %>" class="btn btn-sm btn-warning"
                     >Edit</a
                   >
                   <a
-                    href="/kategori/delete/<%= data[i].id_kategori %>"
+                    href="/kategori/delete/<%= %>"
                     class="btn btn-sm btn-danger"
                     >Delete</a
                   >
